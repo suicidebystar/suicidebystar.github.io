@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.suicidebystar.com	TRUE	/	FALSE	1999999999	phpbb3_hnbdh_u	1
+.suicidebystar.com	TRUE	/	FALSE	1999999999	phpbb3_hnbdh_sid	3872332892c23533c11c541b1e8780d9
+

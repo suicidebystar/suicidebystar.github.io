@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	
+<!-- Mirrored from www.suicidebystar.com/tools/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 18:02:32 GMT -->
+<head>
+		<title>SBS Widgets!</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+		<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+		<link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+		<script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Bevan' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+
+
+		<!-- Javascript -->
+		<script type="text/javascript" charset="utf-8">
+
+			var widget_header = "<div id=\"widget\" style=\"width: 500px; text-align:center\">" +
+								"<div style=\"border-radius: 10px;-ms-border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px;-khtml-border-radius: 10px;background: #313131;float: left;display: inline;margin: 0 auto;padding: 5px;width: 100%;\">" +
+								"<h4 style=\"color: #8A8A8A; font-weight: bold; margin-left: 10px; text-align:left\">Escucha este disco en...</h4></div>";
+
+			var widget_footer = "</div>";
+
+			var spotify_image_url = "../static/spotify.png";
+			var grooveshark_image_url = "../static/grooveshark.png";
+			var bandcamp_image_url = "../static/bandcamp.png";
+
+			var spotify_image_url_hover = "https://suicidebystar.com/static/spotify-hover.png";
+			var grooveshark_image_url_hover = "https://suicidebystar.com/static/grooveshark-hover.png";
+			var bandcamp_image_url_hover = "https://suicidebystar.com/static/bandcamp-hover.png";
+
+			var spotify_image_alt = "Escucha el disco en Spotify";
+			var grooveshark_image_alt = "Escucha el disco en Grooveshark";
+			var bandcamp_image_alt = "Escucha el disco en Bancamp";
+
+			var spotify_image_id = "spotifyImg";
+			var grooveshark_image_id = "groovesharkImg";
+			var bandcamp_image_id = "bandcampImg";
+
+			var widget_element_template = "<a class=\"element\" href=\"{url}\"><img id=\"{id}\" onmouseover=\"document.getElementById(\'{id}\').src=\'{hover}\'\" onmouseout=\"document.getElementById(\'{id}\').src=\'{img}\'\" src=\"{img}\" alt=\"{alt}\"></img></a>"
+
+
+
+			//Función que escapa código HTML
+			function safe_tags(str) {
+    			return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') ;
+			}
+
+			function put_code_on_pre(codestr) {
+				$("#code").text(codestr);
+			}
+
+			function create_widget_element(ahref, imgsrc, imgalt, imgid, imgsrchover) {
+				var widget_element = widget_element_template.replace("{url}", ahref);
+				widget_element = widget_element.replace("{img}", imgsrc);
+				widget_element = widget_element.replace("{img}", imgsrc);
+				widget_element = widget_element.replace("{alt}", imgalt);
+				widget_element = widget_element.replace("{id}", imgid);
+				widget_element = widget_element.replace("{id}", imgid);
+				widget_element = widget_element.replace("{id}", imgid);
+				widget_element = widget_element.replace("{hover}", imgsrchover);
+				return widget_element;
+			}
+
+
+			$(document).ready(function() {
+   				$("#button").on("click", function() {
+   					var widget_html = widget_header;
+
+   					var spotify_url = $("#spotify").val();
+   					var grooveshark_url = $("#grooveshark").val();
+   					var bandcamp_url = $("#bandcamp").val();
+
+   					if(spotify_url) {
+   						widget_html += create_widget_element(spotify_url, spotify_image_url, spotify_image_alt, spotify_image_id, spotify_image_url_hover);
+   					}
+
+   					if(grooveshark_url) {
+   						widget_html += create_widget_element(grooveshark_url, grooveshark_image_url, grooveshark_image_alt, grooveshark_image_id, grooveshark_image_url_hover);
+   					}
+
+   					if(bandcamp_url) {
+   						widget_html += create_widget_element(bandcamp_url, bandcamp_image_url, bandcamp_image_alt, bandcamp_image_id, bandcamp_image_url_hover);
+   					}
+
+   					widget_html += widget_footer;
+
+   					$("#preview").html(widget_html);
+   					$("#code").text(widget_html);
+
+
+   					$("#results").show("slow");
+   				});
+ 			});
+		</script>
+
+		<!-- CSS -->
+		<style type="text/css">
+
+			button, input, p, h2 {
+				font-family: 'Pontano Sans', Verdana, Helvetica, sans-serif;
+			}
+
+		 	.container {
+		 		text-align: center;
+		 	}
+
+		 	h1 {
+		 		font: 400 60px/1.3 'Bevan', Georgia, serif;
+		 		margin-bottom: 30px;
+		 	}
+
+		 	textarea {
+		 		width: 100%;
+		 	}
+
+		 	pre {
+		 		text-align: left;
+		 	}
+		 	
+		 	#preview {
+		 		width: 100%;
+		 		min-height: 50px;
+		 	}
+
+		 	#button {
+		 		margin-bottom: 30px;
+		 	}
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<h1>SBS Widgets! <small>beta</small></h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<input id="spotify" type="text" placeholder="Spotify URL"></input>
+					<input id="grooveshark" type="text" placeholder="Grooveshark URL"></input>
+					<input id="bandcamp" type="text" placeholder="Bandcamp URL"></input>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12">
+					<p class="text-info">Los campos vac&iacute;os no aparecer&aacute;n en el widget.</br>Las URLs tienen que empezar con <code>http://</code></p>
+					<button id="button" class="btn btn-success btn-large">Crear widget</button>
+				</div>
+			</div>
+			<div id="results" style="display:none">
+				<div class="row">
+					<div class="span12">
+						<h2>C&oacute;digo</h2>
+						<p class="text-info">Copiar y pegar al final de la entrada</p>
+						<pre id="code" class="prettyprint">
+						</pre>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span12">
+						<h2>Preview</h2>
+						<div id="preview">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+<!-- Mirrored from www.suicidebystar.com/tools/widgets.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 09 May 2022 18:02:32 GMT -->
+</html>

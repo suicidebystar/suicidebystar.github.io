@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<oembed><version>1.0</version><provider_name>SuicideByStar</provider_name><provider_url>https://www.suicidebystar.com</provider_url><author_name>tharandur</author_name><author_url>https://www.suicidebystar.com/author/tharandur/</author_url><title>Doominical #001: Repaso veraniego | Doominical | SuicideByStar</title><type>rich</type><width>600</width><height>338</height><html>&lt;blockquote class="wp-embedded-content"&gt;&lt;a href="https://www.suicidebystar.com/doominical-001-repaso-veraniego/"&gt;Doominical #001: Repaso veraniego&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script type='text/javascript'&gt;
+&lt;!--//--&gt;&lt;![CDATA[//&gt;&lt;!--
+		/*! This file is auto-generated */
+		!function(d,l){"use strict";var e=!1,o=!1;if(l.querySelector)if(d.addEventListener)e=!0;if(d.wp=d.wp||{},!d.wp.receiveEmbedMessage)if(d.wp.receiveEmbedMessage=function(e){var t=e.data;if(t)if(t.secret||t.message||t.value)if(!/[^a-zA-Z0-9]/.test(t.secret)){var r,a,i,s,n,o=l.querySelectorAll('iframe[data-secret="'+t.secret+'"]'),c=l.querySelectorAll('blockquote[data-secret="'+t.secret+'"]');for(r=0;r&lt;c.length;r++)c[r].style.display="none";for(r=0;r&lt;o.length;r++)if(a=o[r],e.source===a.contentWindow){if(a.removeAttribute("style"),"height"===t.message){if(1e3&lt;(i=parseInt(t.value,10)))i=1e3;else if(~~i&lt;200)i=200;a.height=i}if("link"===t.message)if(s=l.createElement("a"),n=l.createElement("a"),s.href=a.getAttribute("src"),n.href=t.value,n.host===s.host)if(l.activeElement===a)d.top.location.href=t.value}}},e)d.addEventListener("message",d.wp.receiveEmbedMessage,!1),l.addEventListener("DOMContentLoaded",t,!1),d.addEventListener("load",t,!1);function t(){if(!o){o=!0;var e,t,r,a,i=-1!==navigator.appVersion.indexOf("MSIE 10"),s=!!navigator.userAgent.match(/Trident.*rv:11\./),n=l.querySelectorAll("iframe.wp-embedded-content");for(t=0;t&lt;n.length;t++){if(!(r=n[t]).getAttribute("data-secret"))a=Math.random().toString(36).substr(2,10),r.src+="#?secret="+a,r.setAttribute("data-secret",a);if(i||s)(e=r.cloneNode(!0)).removeAttribute("security"),r.parentNode.replaceChild(e,r)}}}}(window,document);
+//--&gt;&lt;!]]&gt;
+&lt;/script&gt;&lt;iframe sandbox="allow-scripts" security="restricted" src="https://www.suicidebystar.com/doominical-001-repaso-veraniego/embed/" width="600" height="338" title="&#xAB;Doominical #001: Repaso veraniego&#xBB; &#x2014; SuicideByStar" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" class="wp-embedded-content"&gt;&lt;/iframe&gt;</html><thumbnail_url>https://www.suicidebystar.com/blog/wp-content/uploads/2017/09/doominical-001-wp.png</thumbnail_url><thumbnail_width>940</thumbnail_width><thumbnail_height>450</thumbnail_height><description>Escucha la&#xA0;playlist&#xA0;de este post en&#xA0;Spotify Noticias frescas El 22 de Septiembre&#xA0;Mastodon&#xA0;van a lanzar un EP titulado&#xA0;Cold Dark Place, del que ya podemos</description></oembed>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Almacenamiento en caché de objetos 34/40 objetos que utilizan disk
+
+Object Cache debug info:
+Caching:            enabled
+Total calls:        40
+Cache hits:         34
+Total time:         0.0389
+Minimizado usando apc
+
+Minify debug info:
+Theme:              72e62
+Template:           index
+
+Caching de base de datos 4/4 consultas en 0.001 segundos usando apc
+
+Db cache debug info:
+Total queries:      4
+Cached queries:     4
+Total query time:   0.0007
+
+Served from: suicidebystar.com @ 2022-05-09 19:38:11 by W3 Total Cache
+-->
